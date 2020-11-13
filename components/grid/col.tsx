@@ -44,7 +44,7 @@ function parseFlex(flex: FlexType): string {
 
   return flex;
 }
-const sizes = ['xs', 'sm', 'md', 'lg', 'xl', 'xxl'];
+const sizes = ['xs', 'sm', 'md', 'lg', 'xl', 'xxl'] as const;
 const Col = React.forwardRef<HTMLDivElement, ColProps>((props, ref) => {
   const { getPrefixCls, direction } = React.useContext(ConfigContext);
   const { gutter, wrap } = React.useContext(RowContext);
